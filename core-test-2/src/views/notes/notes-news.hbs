@@ -1,0 +1,33 @@
+
+{{#each errors }}
+
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+         {{msg}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+{{/each}}
+
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-body">
+            <form action="/notes/add" method="POST">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Title</label>
+                <input name="title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="title">
+                
+            </div>
+            <div class="form-group mt-4">
+                <label for="exampleInputPassword1">Description</label>
+                <input name="description" type="text" class="form-control" id="exampleInputPassword1" placeholder="description">
+            </div>
+            <div class="form-group mt-4"><button type="submit" class="btn btn-primary">Submit</button></div>
+            
+
+
+            </form>
+        </div>
+    </div>
+</div>

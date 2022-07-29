@@ -1,0 +1,26 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Date</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each notes as |item|}}
+      <tr>
+        <th scope="row">{{@index}}</th>
+        <td>{{item.title}}  </td>
+        <td>{{item.description}}</td>
+        <td>{{item.date}}</td>
+        <td>
+          <a href="/notes/edit/{{id}}"><i class="fa fa-edit"></i></a>
+          <a href="/notes/remove/{{id}}"><i class="fa fa-remove"></i></a>
+        </td>
+      </tr>
+    {{/each}}
+
+  </tbody>
+</table>

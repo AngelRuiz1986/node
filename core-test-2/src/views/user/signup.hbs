@@ -1,0 +1,43 @@
+{{#each errors }}
+
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+         {{msg}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+{{/each}}
+
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-body">
+            <form action="/user/singup" method="POST">
+            <div class="form-group">
+                <label for="custom-0">Name</label>
+                <input value="{{name}}" name="name" type="text" class="form-control" id="custom-0"  placeholder="Name">
+                
+            </div>
+            <div class="form-group mt-4">
+                <label for="custom-1">Email</label>
+                <input value="{{email}}"  name="email" type="email" class="form-control" id="custom-1" placeholder="Email">
+            </div>
+
+            <div class="form-group mt-4">
+                <label for="custom-2">Password</label>
+                <input value="{{password}}" name="password" type="password" class="form-control" id="custom-2" placeholder="Password">
+            </div>
+
+            <div class="form-group mt-4">
+                <label for="custom-3">Confirm password</label>
+                <input value="{{confirmPassword}}" name="confirmPassword" type="password" class="form-control" id="custom-3" placeholder="Confirm Password">
+            </div>
+
+            <div class="form-group mt-4"><button type="submit" class="btn btn-primary">Submit</button></div>
+            
+
+
+            </form>
+        </div>
+    </div>
+</div>
